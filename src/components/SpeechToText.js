@@ -19,7 +19,8 @@ const SpeechToText = () => {
     resetTranscript,
     changeLanguage,
     setThresholdMode,
-    updateThreshold
+    updateThreshold,
+    setManualTranscript
   } = useSpeechRecognition();
 
   const [showSettings, setShowSettings] = useState(false);
@@ -51,8 +52,8 @@ const SpeechToText = () => {
   const handleTranscriptChange = (e) => {
     if (!isListening) {
       // Allow manual editing only when not listening
-      // Note: This would require adding a setTranscript function to the hook
-      // For now, we'll just prevent editing while listening
+      const newValue = e.target.value;
+      setManualTranscript(newValue);
     }
   };
 

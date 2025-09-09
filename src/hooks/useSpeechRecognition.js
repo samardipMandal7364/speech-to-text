@@ -225,6 +225,11 @@ const useSpeechRecognition = () => {
     setThreshold(Math.max(0, Math.min(1, newThreshold))); // Clamp between 0 and 1
   }, []);
 
+  const setManualTranscript = useCallback((newTranscript) => {
+    setTranscript(newTranscript);
+    finalTranscriptRef.current = newTranscript;
+  }, []);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -253,7 +258,8 @@ const useSpeechRecognition = () => {
     resetTranscript,
     changeLanguage,
     setThresholdMode,
-    updateThreshold
+    updateThreshold,
+    setManualTranscript
   };
 };
 
