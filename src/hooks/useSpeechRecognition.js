@@ -8,7 +8,7 @@ const useSpeechRecognition = () => {
   const [error, setError] = useState(null);
   const [language, setLanguage] = useState('en-US');
   const [audioLevel, setAudioLevel] = useState(0);
-  const [threshold, setThreshold] = useState(0.1); // Default threshold (0-1 scale)
+  const [threshold, setThreshold] = useState(0); // Default threshold (0-1 scale)
   const [isThresholdMode, setIsThresholdMode] = useState(false);
   const [isAboveThreshold, setIsAboveThreshold] = useState(false);
   
