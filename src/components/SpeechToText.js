@@ -38,7 +38,8 @@ const SpeechToText = () => {
     { code: 'pt-BR', name: 'Portuguese (Brazil)' },
     { code: 'ru-RU', name: 'Russian' },
     { code: 'ar-SA', name: 'Arabic' },
-    { code: 'hi-IN', name: 'Hindi' }
+    { code: 'hi-IN', name: 'Hindi' },
+    { code: 'bn-BD', name: 'Bengali' }
   ];
 
   const handleToggleListening = () => {
@@ -138,9 +139,9 @@ const SpeechToText = () => {
             ⚙️ Settings
           </button> */}
         </div>
-
-        {/* {showSettings && (
-          <div className="settings-panel">
+{/* 
+        {showSettings && (
+          <div className="settings-panel"> */}
             <div className="setting-group">
               <label htmlFor="language-select">Language:</label>
               <select
@@ -157,7 +158,7 @@ const SpeechToText = () => {
               </select>
             </div>
             
-            <div className="setting-group">
+            {/* <div className="setting-group">
               <label className="checkbox-label">
                 <input
                   type="checkbox"
